@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface TbHistoricoDAO {
     void create(TbHistorico historico);
-    List<TbHistorico> findAll();
+    List<TbHistorico> findByDate(String date);
+    Long verifyES(String codRfid);
+    String returnName(String codRfid);
 }

@@ -23,8 +23,6 @@ public class TbHistorico {
     @Column(name = "tipo_acesso")
     private String tipoAcesso;
 
-    @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "timestamp")
     private Date timeStamp;
 

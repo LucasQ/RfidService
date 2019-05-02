@@ -19,7 +19,17 @@ public class TbHistoricoServiceImpl implements TbHistoricoService {
     }
 
     @Override
-    public List<TbHistorico> findAll() {
-        return historicoDAO.findAll();
+    public List<TbHistorico> findByDate(String date) {
+        return historicoDAO.findByDate(date);
+    }
+
+    @Override
+    public Long verifyES(String codRfid) {
+        return historicoDAO.verifyES(codRfid);
+    }
+
+    @Override
+    public String returnName(String codRfid) {
+        return historicoDAO.returnName(codRfid);
     }
 }
