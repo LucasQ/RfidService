@@ -50,7 +50,9 @@ public class RfidHandle {
 
         historico.setNome(historicoService.returnName(historico.getCodRfid()));
 
-        historicoService.create(historico);
+        if(historico.getNome() != null && !historico.getNome().isEmpty()) {
+            historicoService.create(historico);
+        }
         return historico;
     }
 
